@@ -1,10 +1,39 @@
 import React from 'react'
 import './cadastro.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'
 import git from '../assets/git.png'
+import axios from 'axios';
+import { useState } from 'react'
 const cadastro = () => {
+  const [nome, setNome] = useState('');
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [error, setError] = useState(false);
+  const [user, setUser] = useState(null);
+  const navigate = useNavigate();
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const response = await axios.post('http://localhost:3001/create-user', {
+        nome,
+        email,
+        senha,
+      });
+
+      // Se a criação do usuário for bem-sucedida, você pode atualizar o estado ou fazer outras ações
+      setUser(response.data);
+
+      // Redirecionar para a página de login ou outra página, se necessário
+      navigate('/login');
+    } catch (error) {
+      console.error('Erro ao criar usuário:', error);
+      setError(true);
+    }
+  };
 
   return (
     <div>
@@ -17,10 +46,10 @@ const cadastro = () => {
         <Link to='https://www.instagram.com/anselmo_henrique02/?next=%2F' target='_blank'><img src={instagram} alt="" /></Link>
         <Link to='https://github.com/Anselmo5' target='_blank'><img src={git} alt="" /></Link>
       </div>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>INSCREVER-SE</button>
+      <input type="text" placeholder="Name"  onChange={(e) => setNome(e.target.value)}/>
+      <input type="email" placeholder="Email" onChange={ (e) => setEmail(e.target.value)}/>
+      <input type="password" placeholder="Password" onChange={(e) => setSenha(e.target.value)}/>
+      <button onClick={(e)=> handleSubmit(e)}>INSCREVER-SE</button>
     </form>
   </div>
   <div class="overlay-container">
