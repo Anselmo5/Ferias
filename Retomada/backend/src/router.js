@@ -14,14 +14,14 @@ let users =[
         name: 'Anselmo',
         email: 'Anselmo@gmail.com',
         password: '1234',
-        page: '/home',
+        page:'/home',
       },
       {
         id: 2,
         name: 'Bruno',
         email: 'Brunobandeira@gmail.com',
         password: '1234',
-        page: '/home',
+        page:'/home',
       },
 ]
 
@@ -51,7 +51,7 @@ router.post('/login', (req, res) => {
       name: nome,
       email: email,
       password: senha,
-      page: '/adm',
+      page:'/home',
     };
   
     users.push(newUser);
