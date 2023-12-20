@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import App from "./App"
 import Cadastro from "./components/cadastro";
+import Home from "./components/home";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,8 +21,8 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "cadastro",
-    element: <Cadastro/>,
+    path: "home",
+    element: <Home/>,
   },
 ]);
 
