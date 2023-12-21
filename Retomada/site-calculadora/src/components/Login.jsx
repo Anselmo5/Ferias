@@ -1,5 +1,5 @@
 import React from 'react'
-import './login.css'
+import './Login.css'
 import { Link,useNavigate } from 'react-router-dom'
 import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'

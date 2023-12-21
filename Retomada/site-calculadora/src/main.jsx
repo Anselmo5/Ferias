@@ -7,8 +7,10 @@ import {
   Link,
 } from "react-router-dom";
 import App from "./App"
-import Cadastro from "./components/cadastro";
-import Home from "./components/home";
+import Cadastro from "./components/Cadastro";
+import Home from "./components/Home";
+import Repositorio from './components/Repositorio'
+import Calculadora from './components/Calculadora'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +25,16 @@ const router = createBrowserRouter([
   {
     path: "home",
     element: <Home/>,
+  },
+
+  {
+    path: "calculadora",
+    element: <Calculadora/>,
+  },
+
+  {
+    path: "repositorio",
+    element: <Repositorio/>,
   },
 ]);
 

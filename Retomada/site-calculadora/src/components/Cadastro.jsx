@@ -1,12 +1,12 @@
 import React from 'react'
-import './cadastro.css'
+import './Cadastro.css'
 import { Link, useNavigate } from 'react-router-dom'
 import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'
 import git from '../assets/git.png'
 import axios from 'axios';
 import { useState } from 'react'
-const cadastro = () => {
+const Cadastro = () => {
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
   const [senha, setSenha] = useState('');
@@ -23,12 +23,8 @@ const cadastro = () => {
         email,
         senha,
       });
-
-      // Se a criação do usuário for bem-sucedida, você pode atualizar o estado ou fazer outras ações
       setUser(response.data);
-
-      // Redirecionar para a página de login ou outra página, se necessário
-      navigate('/login');
+      navigate('/home');
     } catch (error) {
       console.error('Erro ao criar usuário:', error);
       setError(true);
@@ -66,4 +62,4 @@ const cadastro = () => {
   )
 }
 
-export default cadastro
+export default Cadastro
