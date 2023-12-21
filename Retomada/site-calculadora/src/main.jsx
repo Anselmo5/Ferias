@@ -26,16 +26,16 @@ const router = createBrowserRouter([
     path: "home",
     element: <Home/>,
   },
-
+  {
+    path: "repositorio",
+    element: <Repositorio/>,
+  },
   {
     path: "calculadora",
     element: <Calculadora/>,
   },
 
-  {
-    path: "repositorio",
-    element: <Repositorio/>,
-  },
+
 ]);
 
 createRoot(document.getElementById("root")).render(
