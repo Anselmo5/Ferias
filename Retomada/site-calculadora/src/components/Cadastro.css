@@ -150,6 +150,26 @@
     color:#fff;
   }
 
+  .linklogin a{
+    font-family: 'Domine', serif;
+    text-decoration: none;
+    color:#fff;
+    transition: all 1s;
+  }
+
+  .linklogin a:hover{
+    color: #242424;
+    transition: all 1s;
+  }
+
+/* Responsividade */
+
+  @media screen and (min-width:1006px) {
+    .linklogin a{
+      display: none;
+    }
+  }
+  
 
   @media screen and (max-width:1005px) {
 
@@ -162,7 +182,7 @@
     }
   
     .imgalingcadas{
-      margin-top:50px;
+      margin-top:19px;
     }
   
     .containercadas2{

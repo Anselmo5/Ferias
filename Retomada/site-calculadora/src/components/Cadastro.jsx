@@ -79,6 +79,10 @@ const Cadastro = () => {
                         />
                         <button type='submit' >Criar Conta</button>
 
+                        <div className='linklogin'>
+                            <Link to='/'>Já tenho conta</Link>
+                        </div>
+
                         <div className='midiaalingcadas'>
                           <div className='formmidiacadas'>
                             <Link to='https://www.instagram.com/anselmo_henrique02/?next=%2F' target='_blank'> <img src={instagram} alt="" /></Link>

@@ -71,6 +71,9 @@ const Login = () => {
                   />
 
                   <button onClick={(e) => handleLogin(e)}>ENTRAR</button>
+                  <div className='linkcadas'>
+                    <Link to='cadastro'>Criar conta</Link>
+                  </div>
 
                   <div className='midiaaling'>
                       <div className='formmidia'>
