@@ -5,6 +5,7 @@ import linkedin from '../assets/linkedin.png'
 import instagram from '../assets/instagram.png'
 import git from '../assets/git.png'
 import axios from 'axios';
+import logo from '../assets/logo.png'
 import { useState } from 'react'
 const Cadastro = () => {
   const [nome, setNome] = useState('');
@@ -33,32 +34,51 @@ const Cadastro = () => {
 
   return (
     <div>
-<div class="container" id="container">
-  <div class="form-container sign-in-container">
-  <form action="#">
-      <h1>Criar Uma Conta</h1>
-      <div class="social-container">
-      <Link to='https://www.linkedin.com/in/anselmo-henrique-266647233/' target='_blank'><img src={linkedin} alt="" /></Link> 
-        <Link to='https://www.instagram.com/anselmo_henrique02/?next=%2F' target='_blank'><img src={instagram} alt="" /></Link>
-        <Link to='https://github.com/Anselmo5' target='_blank'><img src={git} alt="" /></Link>
-      </div>
-      <input type="text" placeholder="Name"  onChange={(e) => setNome(e.target.value)}/>
-      <input type="email" placeholder="Email" onChange={ (e) => setEmail(e.target.value)}/>
-      <input type="password" placeholder="Password" onChange={(e) => setSenha(e.target.value)}/>
-      <button onClick={(e)=> handleSubmit(e)}>INSCREVER-SE</button>
-    </form>
-  </div>
-  <div class="overlay-container">
-    <div class="overlay">
-      <div class="overlay-panel overlay-right">
-        <h1>Welcome Back!</h1>
-        <p>Insira seus dados pessoais e comece sua jornada conosco</p>
-        <Link to='/' class="ghost" id="signIn">ENTRAR</Link>
-      </div>
+        <div className='alingcadas1'>
+          <div className='containercadas1  '>
+            <div className='alingcontcadas'>
+              <div className='contcadas'>
+                  <div className='formtextcadas'>
+                      <h2>Hello Pessoal</h2>
+                      <p>Crie sua conta para poder desfrutar do nosso serviço</p>
+                  </div>
+
+                  <div className='enviologincadas'>
+                      <Link to='/'>Já tenho conta</Link>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='alingcadas2'>
+          <div className='containercadas2'>
+            <div className='alingcontcadas2'>
+              <div className='contcadas2'>
+                <div className='imgalingcadas'>
+                      <img src={logo} alt="" />
+                </div>
+
+                <div className='contenviocadas'>
+                        <input type="text" placeholder='Exemplo: Maria Clara'/>
+                        <input type="email" placeholder='Exemplo: Mariaclara123@gmail.com' />
+                        <input type="password" />
+                        <button>Criar Conta</button>
+
+                        <div className='midiaalingcadas'>
+                          <div className='formmidiacadas'>
+                            <Link to='https://www.instagram.com/anselmo_henrique02/?next=%2F' target='_blank'> <img src={instagram} alt="" /></Link>
+                            <Link to='https://www.linkedin.com/in/anselmo-henrique-266647233/' target='_blank'> <img src={linkedin} alt="" /></Link>
+                            <Link to='https://github.com/Anselmo5' target='_blank'> <img src={git} alt="" /></Link>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
-  </div>
-</div>
-</div>
   )
 }
 
