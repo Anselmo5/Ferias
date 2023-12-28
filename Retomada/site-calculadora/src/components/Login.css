@@ -149,3 +149,88 @@
   padding: 10px;
   text-align: center;
 }
+
+@media screen and (max-width:1005px) {
+
+  .contenvio input{
+    width: 40vw;
+  }
+
+  .contenvio button{
+    width: 42vw;
+  }
+
+  .imgaling{
+    margin-top:50px;
+  }
+
+  .container1{
+    width:100vw;
+  }
+
+  .container2{
+    width: 0vw;
+    height: 0vh;
+    display: none;
+  }
+
+  .formtext{
+    width: 0vw;
+    height: 0vh;
+    display: none;
+  }
+
+  .enviocadas {
+    width: 0vw;
+    height: 0vh;
+    display: none;
+  }
+
+  .enviocadas a{
+    width: 0vw;
+    height: 0vh;
+    display: none;
+
+  }
+
+  .alingcontainer2{
+    margin-top: 0;
+  }
+}
+
+
+@media screen and (max-width:763px) {
+
+  .imgaling{
+    margin-top: 80px;
+  }
+
+  .contenvio input{
+    width: 40vw;
+  }
+
+  .contenvio button{
+    width: 43vw;
+  }
+  
+  .formmidia img{
+    width: 5vw;
+  }
+  
+  
+}
+
+
+@media screen and (max-width:563px) {
+  .contenvio button{
+    width: 44vw;
+  }
+  
+}
+
+@media screen and (max-width:563px) {
+  .formmidia img{
+    width: 7vw;
+  }
+  
+}

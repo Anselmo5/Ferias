@@ -149,3 +149,62 @@
     text-decoration: none;
     color:#fff;
   }
+
+
+  @media screen and (max-width:1005px) {
+
+    .contenviocadas input{
+      width: 40vw;
+    }
+  
+    .contenviocadas button{
+      width: 42vw;
+    }
+  
+    .imgalingcadas{
+      margin-top:50px;
+    }
+  
+    .containercadas2{
+      width:100vw;
+    }
+
+  
+  }
+  
+  
+  @media screen and (max-width:763px) {
+  
+    .imgaling{
+      margin-top: 80px;
+    }
+  
+    .contenviocadas input{
+      width: 40vw;
+    }
+  
+    .contenviocadas button{
+      width: 43vw;
+    }
+    
+    .formmidiacadas img{
+      width: 5vw;
+    }
+    
+    
+  }
+  
+  
+  @media screen and (max-width:563px) {
+    .contenviocadas button{
+      width: 44vw;
+    }
+    
+  }
+  
+  @media screen and (max-width:563px) {
+    .formmidiacadas img{
+      width: 7vw;
+    }
+    
+  }
