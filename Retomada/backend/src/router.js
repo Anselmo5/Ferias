@@ -13,14 +13,14 @@ let users =[
         id: 1,
         name: 'Anselmo',
         email: 'Anselmo@gmail.com',
-        password: '1234',
+        password: '240206',
         page:'/home',
       },
       {
         id: 2,
         name: 'Bruno',
         email: 'Brunobandeira@gmail.com',
-        password: '1234',
+        password: '123456',
         page:'/home',
       },
 ]
