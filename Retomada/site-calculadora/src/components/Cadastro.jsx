@@ -60,10 +60,24 @@ const Cadastro = () => {
                 </div>
 
                 <div className='contenviocadas'>
-                        <input type="text" placeholder='Exemplo: Maria Clara'/>
-                        <input type="email" placeholder='Exemplo: Mariaclara123@gmail.com' />
-                        <input type="password" />
-                        <button>Criar Conta</button>
+                        <input type="text" 
+                        id="nome"
+                        placeholder='Exemplo: Maria Clara'
+                        required
+                        onChange={(e) => setNome(e.target.value)}
+                        
+                        />
+                        <input type="email" 
+                        placeholder='Exemplo: Mariaclara123@gmail.com' 
+                        id='email'
+                        onChange={ (e) => setEmail(e.target.value)}
+                        />
+                        <input type="password" 
+                           placeholder='No mínimo 6 caracteres'
+                           id='senha'
+                           onChange={(e) => setSenha(e.target.value)}
+                        />
+                        <button type='submit' >Criar Conta</button>
 
                         <div className='midiaalingcadas'>
                           <div className='formmidiacadas'>

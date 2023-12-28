@@ -61,12 +61,16 @@ const Login = () => {
  
                   <input type="email" 
                     placeholder='Exemplo: Mariaclara123@gmail.com'
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                   <input type="password" 
+                      placeholder='No mínimo 6 caracteres '
+                      required
+                      onChange={(e) => setPassword(e.target.value)}
                   
                   />
 
-                  <button>ENTRAR</button>
+                  <button onClick={(e) => handleLogin(e)}>ENTRAR</button>
 
                   <div className='midiaaling'>
                       <div className='formmidia'>
