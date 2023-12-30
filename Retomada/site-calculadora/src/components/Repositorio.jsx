@@ -18,7 +18,7 @@ const Repositorio = () => {
       <div className='formimgrepo'>
               <img src={logo} alt="" />
             </div>
-
+    
         <div className='contrepo'>
                 <Link to='/home'>Home</Link>
                 <Link to=''>Repositorio</Link>

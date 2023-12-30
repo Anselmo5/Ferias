@@ -43,14 +43,14 @@ body{
 /* conteudo */
 nav{
     background:#FBA728;
-    width: 100vw;
+    width: 101vw;
     height: 15vh;
 }
 
 .footerrepo footer{
     background:#FBA728;
     width: 100vw;
-    height: 15vh;   
+    height: 16vh;   
     margin-top: 10vh;
     padding: 3px;
 }
@@ -107,3 +107,110 @@ nav{
     font-family: 'Domine', serif;   
 }
 
+@media screen and (max-width:1006px) {
+
+    .alingcontrepo{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .formimgrepo img{
+        margin-top:-3vh;
+    }
+
+    .contrepo{
+        margin-top: -3vh;
+    }
+
+    .footercontrepo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .conttextrepo h2{
+        margin-top: -4vh;
+    }   
+}
+
+@media screen and (max-width:755px) {
+    .formimgrepo img{
+        width: 15vw;
+    }
+
+    .footerlogorepo img{
+        margin-top: -3vh;
+        width: 15vw;
+    }
+
+    .conttextrepo h2{
+        margin-top: -4vh;
+    }
+}
+
+
+@media screen and (max-width:435px) {
+    .formimgrepo img{
+        width: 24vw;
+    }
+
+    .footerlogorepo img{
+        width: 25vw;
+    }
+
+    .conttextrepo h2{
+        margin-top: -4vh;
+    }
+}
+
+
+@media screen and (max-width:825px) {
+    .imgrepo img{
+        margin-top: 5vh;
+    }
+}
+
+
+@media screen and (max-width:625px) {
+    .formrepo{
+        width: 40vw;
+        height: 45vh;
+    }
+
+    .footerrepo footer{
+        margin-top: 20vh;
+    }
+}
+
+
+@media screen and (max-width:431px) {
+
+    .formrepo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .formrepo{
+        width: 40vw;
+        height: 40vh;
+        margin-top: 10vh;
+    }
+
+    .formrepo button{
+        padding: 0;
+        width: 30vw;
+    }
+
+    .imgrepo img{
+        margin-top: 10vh;
+    }
+
+
+    .footerrepo footer{
+        margin-top: 20vh;
+    }
+}
