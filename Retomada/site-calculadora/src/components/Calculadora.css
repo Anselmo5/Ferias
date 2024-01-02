@@ -40,6 +40,14 @@ body{
     flex-direction: column;
 }
 
+.calcaling{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 9vh;
+}
+
 /* conteudo */
 nav{
     background:#FBA728;
@@ -57,7 +65,7 @@ nav{
 
 .formcalc{
     background: #fff;
-    width: 40vw;
+    width:47vw;
     height: 50vh;
     padding: 15px;
     margin-top:5vh;
@@ -69,14 +77,20 @@ nav{
 }
 
 .formcalc button{
-    margin-top: 5vh;
     font-family: 'Domine', serif; 
     background:#FBA728;
     border-radius: 5px;
     color: #fff;
     padding: 10px;
-    width: 20vw;
+    width: 10vw;
     height: 8vh;
+}
+
+
+.formcalc h2{
+    font-family: 'Domine', serif; 
+    text-align: center;
+    color: #242424;
 }
 
 .footerlogocalc img{
@@ -107,6 +121,44 @@ nav{
     font-family: 'Domine', serif;   
 }
 
+.calcinp{
+    padding: 10px;
+}
+
+.calcinp input{
+    width: 20vw;
+    height: 5vh;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background: #242424;
+    font-family: 'Domine', serif; 
+}
+
+.calcinpbtn input{
+    width: 32.3vw;
+    height: 5vh;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background: #242424;
+    font-family: 'Domine', serif; 
+}
+
+.resultcalc input{
+    width: 42.4vw;
+    height: 5vh;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    color: #fff;
+    background: #242424;
+    font-family: 'Domine', serif;
+}
+
+/* responsividade */
 @media screen and (max-width:1006px) {
 
     .alingcontcalc{

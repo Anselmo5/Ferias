@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import './Calculadora.css'
 const Calculadora = () => {
+  const [quantidadeVendas, setQuantidadeVendas] = useState('');
+  const [Anos, setAnos] = useState('');
+  const [totalValor, setTotalValor] = useState('');
+  const [resultado, setResultado] = useState('');
+
+  const calcularResultado = () => {
+    const resultadoCalculado = quantidadeVendas*Anos*365*totalValor; 
+
+    // Atualize o estado do resultado
+    setResultado(resultadoCalculado);
+  };
+
+
   return (
     <div>
              <nav>
@@ -14,8 +27,8 @@ const Calculadora = () => {
     
         <div className='contcalc'>
                 <Link to='/home'>Home</Link>
-                <Link to=''>Repositorio</Link>
-                <Link to='/calculadora'>Calculadora</Link>
+                <Link to='/repositorio'>Repositorio</Link>
+                <Link to=''>Calculadora</Link>
           </div>
 
         </div>
@@ -23,7 +36,42 @@ const Calculadora = () => {
 
         <div className='alingformcalc'>
             <div className='formcalc'>
-                <button onClick={() =>handlerreferen() }>CALCULAR</button>
+                <h2>Faça Seu Calculo Aqui</h2>
+            <div className='calcaling'>
+                    <div className='calcinp'>
+                          <input 
+                            type="number" 
+                            placeholder='ENSIRA A QUANTIDADE DE VENDAS FEITAS' 
+                            value={quantidadeVendas}
+                            onChange={(e) => setQuantidadeVendas(e.target.value)} 
+                            />
+                          <input 
+                            type="number" 
+                            placeholder='ENSIRA OS ANOS'
+                            value={Anos} 
+                            onChange={(e) => setAnos(e.target.value)}
+                          />
+                    </div>
+
+                    <div className='calcinpbtn'>
+                        <input 
+                          type="text" 
+                          placeholder='TOTAL DO VALOR NO ANO$' 
+                          value={totalValor}
+                          onChange={(e) => setTotalValor  (e.target.value)}
+                          />
+                        <button onClick={calcularResultado}>CALCULAR</button>
+                    </div>
+
+                    <div className='resultcalc'>
+                          <input 
+                          type="text" 
+                          placeholder='RESULTADO' 
+                          value={resultado}
+                          onChange={(e) => setResultado(e.target.value)}
+                          disabled/>
+                    </div>
+                </div>
             </div>
         </div>
 
