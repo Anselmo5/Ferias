@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&family=Inria+Serif:ital@1&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+
+/* alinhamento */
+
+
+.alingcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.midiaaling{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.alingenvio{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* conteudo */
+
+.container{
+    width: 65vw;
+    height:60vh;
+    margin: 10px;
+    margin-top:5vh;
+    border-radius: 5px;
+    background:#FFA215;
+}
+  
+  .formmidia a{
+    text-decoration: none;
+  }
+
+  .formmidia img{
+    width: 2vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    background:#fff;
+  }
+
+  .tarefaenvio input{
+    padding: 2vh;
+    margin: 1vw;
+    width: 25vw;
+    height: 3vh;
+    border-radius: 5px;
+    font-family: 'Domine', serif;
+  }
+
+  .tarefaenvio button{
+    width: 10vw;
+    height:7vh;
+    background: #242424;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Domine', serif;
+  }
+  
+  .tarefas h3{
+    margin: 10px;
+    color: #fff;
+    font-family: 'Domine', serif; 
+  }
+
+  .mensege h2{
+    color: #fff;
+    margin-top: 12vh;
+  }
+
+/* responsividade */
