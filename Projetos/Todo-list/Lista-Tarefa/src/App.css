@@ -1,5 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@500&family=Inria+Serif:ital@1&display=swap');
+
 *{
-  padding: 0;
-  margin: 0;
-  border: none;
+    padding: 0;
+    margin: 0;
+    border: none;
 }
+
+
+/* alinhamento */
+
+
+.alingcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.midiaaling{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    flex-direction: row;
+}
+
+.alingenvio{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* conteudo */
+
+.container{
+    width: 65vw;
+    height:60vh;
+    margin: 10px;
+    margin-top:5vh;
+    border-radius: 5px;
+    background:#FFA215;
+}
+  
+  .formmidia a{
+    text-decoration: none;
+  }
+
+  .formmidia img{
+    width: 2vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    background:#fff;
+  }
+
+  .tarefaenvio input{
+    padding: 2vh;
+    margin: 1vw;
+    width: 25vw;
+    height: 3vh;
+    border-radius: 5px;
+    font-family: 'Domine', serif;
+  }
+
+  .tarefaenvio button{
+    width: 10vw;
+    height:7vh;
+    background: #242424;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Domine', serif;
+  }
+  
+  .tarefas h3{
+    margin: 10px;
+    color: #fff;
+    font-family: 'Domine', serif; 
+  }
+
+  .mensege h2{
+    color: #fff;
+    margin-top: 12vh;
+  }
+
+  /* loading */
+
+  .wrapper {
+    width: 200px;
+    height: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    left: 15%;
+    transform-origin: 50%;
+    animation: circle7124 .5s alternate infinite ease;
+  }
+  
+  @keyframes circle7124 {
+    0% {
+      top: 60px;
+      height: 5px;
+      border-radius: 50px 50px 25px 25px;
+      transform: scaleX(1.7);
+    }
+  
+    40% {
+      height: 20px;
+      border-radius: 50%;
+      transform: scaleX(1);
+    }
+  
+    100% {
+      top: 0%;
+    }
+  }
+  
+  .circle:nth-child(2) {
+    left: 45%;
+    animation-delay: .2s;
+  }
+  
+  .circle:nth-child(3) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+  }
+  
+  .shadow {
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.9);
+    position: absolute;
+    top: 62px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 15%;
+    filter: blur(1px);
+    animation: shadow046 .5s alternate infinite ease;
+  }
+  
+  @keyframes shadow046 {
+    0% {
+      transform: scaleX(1.5);
+    }
+  
+    40% {
+      transform: scaleX(1);
+      opacity: .7;
+    }
+  
+    100% {
+      transform: scaleX(.2);
+      opacity: .4;
+    }
+  }
+  
+  .shadow:nth-child(4) {
+    left: 45%;
+    animation-delay: .2s
+  }
+  
+  .shadow:nth-child(5) {
+    left: auto;
+    right: 15%;
+    animation-delay: .3s;
+  }
+  
+
+/* responsividade */
