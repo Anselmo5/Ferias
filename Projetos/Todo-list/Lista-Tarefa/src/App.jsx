@@ -48,7 +48,16 @@ function App() {
 
                   <div className='alingenvio'>
                       <div className='tarefaenvio'>
-                          <input type="text" />
+                          <input 
+                          type="text" 
+                          placeholder='Tarefa'
+                          onChange={(event) => setName(event.target.value)}
+                          />
+                          <input 
+                          type="datetime-local" 
+                          placeholder='Hora' 
+                          onChange={(event) => setHor(event.target.value)}
+                          />
                           <button onClick={() => enviotarefa()}> ADICIONAR</button>
                       </div>
                   </div>
@@ -74,7 +83,7 @@ function App() {
                   <ul className='form'>
                       {items && items.map((tarefa) => (  //sintaxe do uso do map
                         <li key={tarefa.id} className='form2'>
-                          {tarefa.name} R$: {tarefa.hor} 
+                         Tareva: {tarefa.name} Hora :{tarefa.hor} 
                         </li>
                       ))}
                     </ul>
