@@ -1,55 +1,71 @@
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 
-export const useFecth = (url) => {
+const useFetch = (url) => {
   const [data, setData] = useState(null);
   const [config, setConfig] = useState(null);
   const [method, setMethod] = useState(null);
-  const [callFecth, setCallFecth] = useState(false);
+  const [callFetch, setCallFetch] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [error, setErro] = useState(null);
+  const [error, setError] = useState(null);
+  const [deleteId, setDeleteId] = useState(null)
 
   const httpConfig = (data, method) => {
-    if (method === "POST") {
+    if (method === 'POST') {
       setConfig({
-        method: "POST",
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(data),
       });
-
-      setMethod("POST");
+  
+      setMethod('POST');
+    } else if (method === 'DELETE') {
+      setConfig({
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+  
+      setMethod('DELETE');
+      setDeleteId(data.id);
     }
   };
+  
 
   useEffect(() => {
-    const fecthData = async () => {
+    const fetchData = async () => {
       setLoading(true);
       try {
         const res = await fetch(url);
         const json = await res.json();
         setData(json);
       } catch (error) {
-        setErro("Houve um erro no carregamento");
+        setError('Houve um erro no carregamento');
       }
 
       setLoading(false);
     };
 
-    fecthData();
-  }, [url, callFecth]);
+    fetchData();
+  }, [url, callFetch,deleteId]);
 
   useEffect(() => {
     const httpRequest = async () => {
-      if (method === "POST") {
+      try {
         const res = await fetch(url, config);
         const json = await res.json();
-        setCallFecth(json);
+        setCallFetch(json);
+      } catch (error) {
+        setError('Houve um erro ao enviar a requisição');
       }
     };
 
     httpRequest();
-  }, [config, method, url]);
+  }, [config, method, url,deleteId]);
 
   return { data, httpConfig, loading, error };
 };
+
+export default useFetch;

@@ -83,6 +83,28 @@
     margin-top: 12vh;
   }
 
+
+ .Tarefas ul{
+  padding: 1vw; 
+
+ }
+
+ .Tarefas li{
+  color: #242424;
+  padding: 1vh;
+  margin: 1vh;
+  background: #fff;
+  font-family: 'Domine', serif;
+  list-style: none; 
+ }
+
+ .Tarefas button{
+  color: #fff;
+  padding: 0.5vw;
+  border-radius: 3px;
+  background:#F41D1D;
+ }
+
   /* loading */
 
   .wrapper {
