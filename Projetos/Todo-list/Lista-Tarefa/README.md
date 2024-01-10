@@ -1,8 +1,9 @@
-# React + Vite
+Task List:
+This project was created with the aim of carrying out a task given to me through a react course, which consisted of creating an http request also using a form of exclusion of this method itself after execution.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+With this in mind I decided to make a list of tasks that demonstrates this being carried out in practice.
 
-Currently, two official plugins are available:
+Note: besides being a good way to execute this idea and to-do list, it was already an old project that I wanted to do
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<img src="https://github.com/Anselmo5/Ferias/assets/100934388/afc186d9-02c5-43cd-83e6-ba211c934357"
+ />
