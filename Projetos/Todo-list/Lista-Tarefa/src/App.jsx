@@ -28,9 +28,8 @@ function App() {
   }
 
 
-  function excluirTarefa(event, taskId) {
-    event.preventDefault();
-    httpConfig({ id: taskId }, 'DELETE');
+  function excluirTarefa(id) {
+    httpConfig(id,'DELETE');
   }
 
 
@@ -99,7 +98,7 @@ function App() {
                       {items &&
                         items.map((tarefa) => (
                           <li key={tarefa.id} className='form2'>
-                            Tarefa: {tarefa.name} / Hora: {tarefa.hor} <button onClick={excluirTarefa}>EXCLUIR</button>
+                            Tarefa: {tarefa.name} / Hora: {tarefa.hor} <button onClick={() =>excluirTarefa(tarefa.id)}>EXCLUIR</button>
 
                           </li>
                         ))}

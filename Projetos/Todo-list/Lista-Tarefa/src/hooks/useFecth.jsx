@@ -9,30 +9,30 @@ const useFetch = (url) => {
   const [error, setError] = useState(null);
   const [deleteId, setDeleteId] = useState(null)
 
-  const httpConfig = (data, method) => {
-    if (method === 'POST') {
-      setConfig({
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-  
-      setMethod('POST');
-    } else if (method === 'DELETE') {
-      setConfig({
-        method: 'DELETE',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      setMethod('DELETE');
-      setDeleteId(data.id);
-    }
-  };
-  
+    const httpConfig = (data, method) => {
+      if (method === 'POST') {
+        setConfig({
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+    
+        setMethod('POST');
+      } else if (method === 'DELETE') {
+        setConfig({
+          method: 'DELETE',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        });
+    
+        setMethod(method);
+        setDeleteId(data);
+      }
+    };
+    
 
   useEffect(() => {
     const fetchData = async () => {
@@ -53,17 +53,25 @@ const useFetch = (url) => {
 
   useEffect(() => {
     const httpRequest = async () => {
-      try {
-        const res = await fetch(url, config);
-        const json = await res.json();
-        setCallFetch(json);
-      } catch (error) {
-        setError('Houve um erro ao enviar a requisição');
+      let json
+      
+      if (method === "POST"){
+
+        let fectOptions  = [url,config]
+        const res = await fetch(...fectOptions);
+        json = await res.json();
+      } else if (method === "DELETE") {
+
+        const deleteUrl = `${url}/${deleteId}`
+        const res = await fetch(deleteUrl,config)
+        json = await res.json()
       }
+
+      setCallFetch(json);
     };
 
     httpRequest();
-  }, [config, method, url,deleteId]);
+  }, [config, method, url]);
 
   return { data, httpConfig, loading, error };
 };
