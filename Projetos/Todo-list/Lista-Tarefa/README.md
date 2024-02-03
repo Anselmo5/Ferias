@@ -1,3 +1,5 @@
+Start: Npm run dev
+
 Task List:
 This project was created with the aim of carrying out a task given to me through a react course, which consisted of creating an http request also using a form of exclusion of this method itself after execution.
 
