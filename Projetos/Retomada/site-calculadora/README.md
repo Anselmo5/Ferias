@@ -1,4 +1,5 @@
 # Calccode:
+Start: Npm run dev
 
 The Calccode project was an idea I had to remember concepts that I might have forgotten during a period of time that I didn't code.
 
